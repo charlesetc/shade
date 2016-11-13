@@ -52,6 +52,21 @@ function rget() {
   [ "$status" -eq 0 ]
 }
 
+@test "test get key empty body" {
+  run rget '' .
+  echo "${lines[3]}"
+  [ "${lines[3]}" = '{"error":"not json","error_data":"Please input json to a shade server"}' ]
+  [ "$status" -eq 0 ]
+}
+
+@test "test get key malformed json" {
+  run rget '{' .
+  echo "${lines[3]}"
+  [ "${lines[3]}" = '{"error":"Yojson.Json_error(\"Line 1, bytes 0-1:\\nUnexpected end of input\")"}' ]
+  [ "$status" -eq 0 ]
+}
+
+
 @test "test set key malformed input" {
   run rset '23' .
   echo "${lines[3]}"
