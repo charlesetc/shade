@@ -38,7 +38,7 @@ For a more complicated example check out "example.ml".
 
 # Installation
 
-Right now, this is not on opam. You do need [it](https://opam.ocaml.org/) set up though.
+Right now, this is not on opam. You do need [to install opam](https://opam.ocaml.org/) though.
 
 To install:
 
