@@ -1,0 +1,7 @@
+name = "shade"
+version = "0.1"
+description = "a simple library for json api's"
+requires = "http,yojson"
+archive(byte) = "shade.cmo"
+archive(native) = "shade.cmx"
+archive(native,plugin) = "shade.cmxs"
