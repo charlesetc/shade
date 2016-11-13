@@ -44,7 +44,7 @@ To install:
 
 ```bash
 opam install ocaml-http yojson
-git clone git@github.com:charlesetc/shade.git
+git clone https://github.com/charlesetc/shade.git
 cd shade
 make install
 ```
