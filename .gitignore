@@ -1,2 +1,3 @@
 *.native
+*.sw{p,o}
 _build/
