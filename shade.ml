@@ -46,7 +46,7 @@ let convert_to_shade callback request outchan =
   Http_daemon.respond ~body:text outchan 
 
 let first_uri_section request =
-  "/" ^ List.nth request.sections 0;;
+  "/" ^ try List.nth request.sections 0 with _ -> "";;
 
 let rec aggregated_callback routes request =
   match routes with

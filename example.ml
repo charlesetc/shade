@@ -37,10 +37,20 @@ let get request =
   | json -> raise (Shade_error ("incorrect type : string", json))
 
 
+(* this handler takes a request and returns a yojson json type *)
+let is_a_string request =
+  match request.data with
+  | `String _ -> `String "Yes it's a string!"
+  | data -> `Assoc [
+    "message", `String "No that wasn't a string" ;
+    "data", data
+  ]
+
 (* start the server with the given routes *)
 
 let () =
   Shade.start [
     "/set", set ;
     "/get", get ;
+    "/is_a_string", is_a_string ;
   ]

@@ -11,7 +11,7 @@ test: build
 build:
 	ocamlbuild -use-ocamlfind example.native
 
-install:
+install: build
 	ocamlfind install shade META _build/*
 
 remove:
