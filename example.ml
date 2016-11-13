@@ -1,8 +1,10 @@
 
 (* example.ml *)
 
+open Shade
+
 let main request = 
-  Shade.response ~text:"hi there!"
+  request.data
 
 let () =
   Shade.start main
