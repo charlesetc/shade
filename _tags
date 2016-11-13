@@ -2,3 +2,5 @@
 true: -traverse
 true: package(http)
 true: package(yojson)
+true: package(redis.sync)
+true: package(unix)
