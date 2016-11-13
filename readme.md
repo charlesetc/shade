@@ -49,6 +49,8 @@ cd shade
 make install
 ```
 
+Now you can #require "shade";; in a toplevel or use findlib to build it into your packages!
+
 ## Warnings
 
 Don't use global variables. The http daemon uses some kind of threading thing that screws them up. If you need a simple count you could do cookies (not yet implemented). Alternatively, there's an example using redis in ./example.ml.
